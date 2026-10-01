@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -221,6 +222,7 @@ h1 span {
 
 .action-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   gap: 16px;
 }
@@ -228,6 +230,9 @@ h1 span {
 .qr-card {
   margin: 0;
   flex: 0 0 auto;
+  width: 192px;
+  max-width: 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -266,12 +271,12 @@ h1 span {
 }
 
 .copy-card {
-  flex: 1;
+  flex: 1 1 180px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 12px;
-  min-width: 0;
+  min-width: min(100%, 180px);
 }
 
 #copy-button,
@@ -304,6 +309,7 @@ h1 span {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
   text-align: left;
 }
 
@@ -598,29 +604,18 @@ h2 {
     grid-template-columns: 1fr;
   }
 
-  .action-row {
-    flex-direction: row;
-    align-items: stretch;
+  .qr-card {
+    width: 168px;
   }
 
   #qrcode,
   #qrcode svg {
-    width: 124px;
-    height: 124px;
+    width: 144px;
+    height: 144px;
   }
 
   #copy-button {
-    min-height: 124px;
-    padding: 12px 10px;
-    gap: 8px;
-  }
-
-  .copy-verb {
-    font-size: 0.8rem;
-  }
-
-  .copy-name {
-    font-size: 1rem;
+    min-height: 144px;
   }
 
   .stopa {
@@ -716,43 +711,14 @@ h2 {
     font-size: 1.2rem;
   }
 
-  .action-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
-  }
-
+  .qr-card,
   .copy-card {
-    order: -1;
-  }
-
-  .qr-card {
-    align-self: center;
-  }
-
-  #qrcode,
-  #qrcode svg {
-    width: 148px;
-    height: 148px;
+    width: 100%;
+    flex-basis: 100%;
   }
 
   #copy-button {
-    min-height: 64px;
-    padding: 14px 16px;
-    gap: 10px;
-    border-radius: 16px;
-  }
-
-  #copy-label {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.35em;
-  }
-
-  .copy-verb,
-  .copy-name {
-    font-size: 1.05rem;
+    min-height: 96px;
   }
 
   .steps {
