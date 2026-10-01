@@ -711,7 +711,10 @@ h2 {
     font-size: 1.2rem;
   }
 
-  .qr-card,
+  .qr-card {
+    display: none;
+  }
+
   .copy-card {
     width: 100%;
     flex-basis: 100%;
