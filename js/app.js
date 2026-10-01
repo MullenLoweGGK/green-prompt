@@ -11,7 +11,6 @@
   var action = document.querySelector(".action");
   var defaultHelp =
     "Po naskenovaní je GREEN PROMPT v schránke. Otvor ChatGPT a vlož ho ako prvú správu.";
-  var fromScan = new URL(window.location.href).searchParams.get("scan") === "1";
 
   function pageUrl() {
     var url = new URL(window.location.href);
@@ -77,18 +76,11 @@
       "Schránka nie je dostupná. Prompt je označený nižšie, skopíruj ho odtiaľ a vlož do ChatGPT.";
   }
 
-  function copyPrompt(options) {
-    var sticky = options && options.sticky;
-    var revealFallback = !options || options.revealFallback !== false;
+  function copyPrompt() {
     var done = function () {
-      markCopied(sticky);
+      markCopied(false);
     };
     var failed = function () {
-      if (fromScan && !revealFallback) {
-        copyStatus.textContent =
-          "Klepni na tlačidlo. Prompt sa skopíruje a vložíš ho do ChatGPT.";
-        return;
-      }
       showManualCopy();
     };
 
@@ -105,12 +97,6 @@
   }
 
   drawQr();
-
-  if (fromScan && action) {
-    action.classList.add("is-from-scan");
-    copyStatus.textContent = "Kopírujem GREEN PROMPT do schránky…";
-    copyPrompt({ sticky: true, revealFallback: false });
-  }
 
   if (copyButton) {
     copyButton.addEventListener("click", function () {
