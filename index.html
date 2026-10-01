@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THE GREEN PROMPT — Greenfluenceri</title>
+    <meta
+      name="description"
+      content="Naskenuj QR kód. GREEN PROMPT sa skopíruje do schránky a ty ho vložíš do ChatGPT."
+    />
+    <meta name="theme-color" content="#f7f6f1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Rubik:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <div class="arc arc-left" aria-hidden="true"></div>
+    <div class="arc arc-right" aria-hidden="true"></div>
+
+    <header class="top">
+      <a class="lockup" href="#uvod">
+        <span class="lockup-name">Greenfluenceri</span>
+        <span class="lockup-sub">od Ekofondu SPP</span>
+      </a>
+      <span class="lockup-mark" aria-hidden="true">SPP</span>
+    </header>
+
+    <main>
+      <section class="hero" id="uvod">
+        <div class="hero-copy">
+          <p class="kicker">Ekofond SPP / Greenfluenceri</p>
+          <h1>
+            <span>THE</span>
+            <span class="word-green">GREEN<span class="spark" aria-hidden="true"></span></span>
+            <span>PROMPT</span>
+          </h1>
+          <p class="tagline">Zelený projekt začína zelenším promptom.</p>
+          <p class="lead">
+            Naskenuj QR kód. GREEN PROMPT sa skopíruje do schránky a ty ho vložíš
+            do ChatGPT ako prvú správu.
+          </p>
+        </div>
+
+        <div class="action" id="kopirovat">
+          <p class="action-label">Naskenuj. Vlož do ChatGPT.</p>
+          <div class="action-row">
+            <figure class="qr-card">
+              <div id="qrcode" role="img" aria-label="QR kód na túto stránku"></div>
+              <figcaption>Sken skopíruje prompt</figcaption>
+            </figure>
+            <div class="copy-card">
+              <button type="button" id="copy-button">
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="copy-icon">
+                  <rect x="8" y="8" width="12" height="12" rx="2"></rect>
+                  <path d="M4 16V6a2 2 0 0 1 2-2h10"></path>
+                </svg>
+                <span id="copy-label">
+                  <span class="copy-verb">Skopírovať</span>
+                  <span class="copy-name">GREEN PROMPT</span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <p class="copy-help" id="copy-status" role="status" aria-live="polite">
+            Po naskenovaní je GREEN PROMPT v schránke. Otvor ChatGPT a vlož ho ako prvú správu.
+          </p>
+          <textarea id="prompt-fallback" readonly hidden></textarea>
+        </div>
+      </section>
+
+      <ol class="steps">
+        <li>
+          <span class="step-index">1</span>
+          <strong>Naskenuj</strong>
+          <span>QR kód vloží celý GREEN PROMPT do schránky.</span>
+        </li>
+        <li>
+          <span class="step-index">2</span>
+          <strong>Vlož</strong>
+          <span>Otvor ChatGPT a vlož prompt ako prvú správu.</span>
+        </li>
+        <li>
+          <span class="step-index">3</span>
+          <strong>Píš zadanie</strong>
+          <span>Od ďalšej správy už riešiš úlohu alebo projekt.</span>
+        </li>
+        <li>
+          <span class="step-index">4</span>
+          <strong>Green mode on</strong>
+          <span>Chat ide k veci a míňa menej zbytočných slov.</span>
+        </li>
+      </ol>
+
+      <section class="manifesto">
+        <p>Kritické myslenie pri AI už učíme.</p>
+        <p class="manifesto-em">Kritické míňanie ešte nie.</p>
+      </section>
+
+      <section class="story">
+        <div class="story-block">
+          <h2>AI už patrí do školských lavíc.</h2>
+          <div class="stats">
+            <p><strong>70 %</strong> slovenských žiakov používa AI pri školských úlohách.</p>
+            <p><strong>80 %</strong> ju využíva aj vo voľnom čase.</p>
+          </div>
+          <p class="source">Zdroj: AI Kompas 2025, Scio Research.</p>
+          <p>
+            Od marca 2026 je AI gramotnosť súčasťou štátneho vzdelávacieho programu
+            a od septembra ju základné školy začleňujú do vyučovania. Keď príde nové
+            zadanie, siahnuť po AI je prirodzené.
+          </p>
+        </div>
+        <div class="story-block story-accent">
+          <h2>Paradox zeleného nápadu.</h2>
+          <p class="story-lead">Jeho prvá stopa môže vzniknúť ešte pred ním.</p>
+          <p>
+            Ešte skôr, než vymyslíš projekt, ktorý má pomôcť planéte, môže pri jeho
+            tvorbe vzniknúť prvá ekologická stopa. Stačí siahnuť po AI, ktorá sama
+            spotrebúva energiu, vodu a vytvára emisie.
+          </p>
+        </div>
+      </section>
+
+      <section class="prompt-section" id="pravidla">
+        <div class="section-head">
+          <h2>Jeden prompt nastaví celý chat.</h2>
+          <p>
+            GREEN PROMPT je pripravená prvá správa. Dá AI jasné pravidlá, aby
+            odpovedala priamo, neopakovala už povedané a pri nápadoch rozvíjala
+            len to, čo potrebuješ. Hodnota odpovede ostáva. Zbytočného textu je menej.
+            A popritom sa dozvieš o projekte Greenfluenceri.
+          </p>
+        </div>
+        <ul class="rules">
+          <li>Choď rovno k odpovedi. Bez úvodov a opakovania zadania.</li>
+          <li>Ak stačí jedna veta, napíš jednu vetu.</li>
+          <li>Ak stačia heslá, nepíš celé odseky.</li>
+          <li>Bez fráz typu „Samozrejme“, „Tu sú“, „Určite“.</li>
+          <li>Keď neurčíš počet, najviac tri najsilnejšie možnosti.</li>
+          <li>Copy. Paste. GREEN MODE ON.</li>
+        </ul>
+      </section>
+
+      <section class="stopa" id="stopa">
+        <div>
+          <p class="kicker">Počas práce</p>
+          <h2>Napíš STOPA.</h2>
+          <p>
+            Kedykoľvek počas brainstormingu uvidíš odhad, koľko tvoja práca s AI
+            spotrebovala energie, vody a koľko emisií CO₂e mohla vytvoriť.
+          </p>
+        </div>
+        <ul class="meters">
+          <li><span aria-hidden="true">⚡</span> Energia</li>
+          <li><span aria-hidden="true">💧</span> Voda</li>
+          <li><span aria-hidden="true">🌍</span> Emisie CO₂e</li>
+        </ul>
+      </section>
+
+      <section class="join">
+        <h2>Greenfluenceri od Ekofondu SPP</h2>
+        <p>
+          Žiaci prichádzajú s vlastným ekologickým nápadom a spolu so školou ho
+          premieňajú na reálny projekt. Ak ťa baví meniť veci okolo seba, môžeš
+          sa zapojiť so spolužiakmi.
+        </p>
+        <a class="text-link" href="https://www.greenfluenceri.sk/" target="_blank" rel="noopener noreferrer">
+          www.greenfluenceri.sk
+        </a>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>THE GREEN PROMPT · Greenfluenceri od Ekofondu SPP</p>
+      <button type="button" class="text-button" id="copy-button-foot">Skopírovať GREEN PROMPT</button>
+    </footer>
+
+    <script type="text/plain" id="green-prompt">🌱 GREEN PROMPT
+
+V tomto chate mi pomáhaj tvoriť projekt Greenfluenceri. Pracuj úsporne podľa týchto pravidiel:
+
+Choď rovno k odpovedi. Bez úvodov, zdvorilostnej výplne a opakovania zadania.
+
+Ak stačí jedna veta, napíš jednu vetu.
+
+Ak stačia heslá alebo krátke body, nepíš celé odseky.
+
+Nepíš frázy typu „Samozrejme“, „Tu sú“, „Určite“, „Dúfam, že to pomôže“.
+
+Neopakuj informácie, ktoré už v chate zazneli.
+
+Nepridávaj zhrnutie na konci, ak si ho nepýtam.
+
+Ak neurčím počet návrhov, ponúkni najviac tri najsilnejšie a odlišné možnosti.
+
+Nerob zoznam, ak stačí priama odpoveď. Pri brainstormingu rozvíjaj iba smery, ktoré potrebujem.
+
+Zachovaj rovnakú hodnotu odpovede a obmedz zbytočne generovaný obsah.
+
+Hneď ako prvú odpoveď v tomto chate napíš:
+
+Super, použil si GREEN PROMPT. Odteraz budem odpovedať úspornejšie, pretože aj AI má svoju ekologickú stopu. Každá odpoveď vzniká na serveroch v dátových centrách, ktoré spotrebúvajú elektrinu, vodu na chladenie a podľa zdroja energie vytvárajú aj emisie CO₂.
+
+GREEN PROMPT vznikol v rámci projektu Greenfluenceri od Ekofondu SPP. Greenfluenceri dávajú žiakom možnosť prísť s vlastným ekologickým nápadom a spolu so školou ho premieňať na reálny projekt. Ak ťa baví meniť veci okolo seba k lepšiemu, môžeš sa zapojiť aj ty so spolužiakmi.
+
+Viac o Greenfluenceroch:
+https://www.greenfluenceri.sk/
+
+Ak budeš chcieť počas práce zistiť, akú odhadovanú stopu malo naše chatovanie, napíš:
+
+STOPA
+
+Ukážem ti približný počet vygenerovaných tokenov a z nich odhad:
+⚡ spotrebovanej energie
+💧 spotrebovanej vody
+🌍 vytvorených emisií CO₂e
+
+Môžeme začať. Napíš mi, s čím ti mám pomôcť.
+
+Pri ďalších vecných odpovediach dodrž pravidlá vyššie a na koniec pridaj krátky orientačný odhad v tomto tvare:
+
+🌱 Green Mode — odhad: ~X vecných tokenov · A–B Wh · C–D ml vody · E–F g CO₂e
+↔ Štandardná referencia — odhad: ~Y tokenov · A–B Wh · C–D ml vody · E–F g CO₂e
+
+Footprinty sú orientačné výpočty podľa pracovných koeficientov Greenfluencerov, zostavených z verejných modelových odhadov a následných prepočtov.
+
+Keď napíšem samostatne slovo STOPA, odpovedz súhrnom za celý doterajší chat:
+
+GREEN FOOTPRINT — ODHAD ZA CHAT
+
+Green Mode: N odpovede · ~X vecných tokenov
+⚡ A–B Wh · 💧 C–D ml · 🌍 E–F g CO₂e
+
+Štandardná referencia: ~Y tokenov pri pracovnom koeficiente 1,5
+⚡ A–B Wh · 💧 C–D ml · 🌍 E–F g CO₂e
+
+Hypotetický rozdiel medzi scenármi: ~Z tokenov · A–B Wh · C–D ml vody · E–F g CO₂e.
+
+Rozdiel vo viditeľnom vecnom výstupe je podľa zvoleného predpokladu 33,3 % z referenčného rozsahu.
+
+Ide o orientačné scenáre pre frontier modely GPT, vypočítané podľa pracovných koeficientov Greenfluencerov odvodených z verejných modelových odhadov a následných prepočtov. Nejde o meranie tejto konverzácie. Počet tokenov je približný odhad viditeľného vecného textu; výpočet nezahŕňa footprintové pätičky, disclaimery, vstupné tokeny ani skryté uvažovanie. Referencia používa pracovný koeficient 1,5 a nepredstavuje skutočnú odpoveď ChatGPT bez Green Promptu. Rozdiel medzi scenármi preto nie je potvrdenou úsporou zdrojov.
+
+Ako počítať:
+- X je približný počet tokenov viditeľného vecného textu. Pätičku s odhadom, disclaimer ani tento prompt do X nepočítaj. Orientačne použi počet slov × 1,3.
+- Y = X × 1,5.
+- Energia na token: 0,05–0,15 Wh.
+- Voda na token: 0,18–0,54 ml.
+- Emisie na token: 0,019–0,057 g CO₂e.
+- Uvádzaj rozsah od–do a čísla zaokrúhli tak, aby sa dali prečítať.</script>
+
+    <script src="vendor/qrcode.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
